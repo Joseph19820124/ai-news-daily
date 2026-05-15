@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>每日 AI 新聞 · AI Daily</title>
+<meta name="description" content="每日精選 AI 與 Agent 生態最新動態，每天早上自動更新。資料來源：x.deepsrt.cc。" />
+<meta property="og:title" content="每日 AI 新聞" />
+<meta property="og:description" content="每日精選 AI 與 Agent 生態最新動態，卡片式排版。" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E%F0%9F%A4%96%3C/text%3E%3C/svg%3E" />
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif;
+    background: #fafaf9;
+    color: #1c1917;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+  header { margin-bottom: 24px; }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .subtitle { color: #57534e; font-size: 14px; }
+  .subtitle a { color: #44403c; }
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #57534e;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff;
+    border: 1px solid #e7e5e4;
+    border-radius: 999px;
+    padding: 4px 10px;
+    color: #44403c;
+  }
+  .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: #10b981; }
+  .pill.warning .dot { background: #f59e0b; }
+  .refresh-btn {
+    background: #fff;
+    border: 1px solid #e7e5e4;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font: inherit;
+    font-size: 13px;
+    color: #44403c;
+    cursor: pointer;
+  }
+  .refresh-btn:hover { border-color: #a8a29e; }
+
+  .filter-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 20px 0 18px;
+  }
+  .filter-btn {
+    border: 1px solid #e7e5e4;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font: inherit;
+    font-size: 13px;
+    color: #44403c;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .filter-btn:hover { border-color: #d6d3d1; }
+  .filter-btn.active {
+    background: #1c1917;
+    color: #fff;
+    border-color: #1c1917;
+  }
+  .search {
+    margin-left: auto;
+    flex: 1 1 220px;
+    min-width: 180px;
+    max-width: 320px;
+    border: 1px solid #e7e5e4;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font: inherit;
+    font-size: 13px;
+    color: #1c1917;
+  }
+  .search:focus { outline: none; border-color: #a8a29e; }
+
+  .section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #57534e;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 28px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title .count {
+    background: #f5f5f4;
+    color: #78716c;
+    border-radius: 999px;
+    padding: 1px 8px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #e7e5e4;
+    border-radius: 12px;
+    padding: 16px 18px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .card:hover {
+    border-color: #d6d3d1;
+    box-shadow: 0 2px 6px -2px rgba(0,0,0,.05);
+  }
+  .card .tag {
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 500;
+    color: #44403c;
+    background: #f5f5f4;
+    border-radius: 6px;
+    padding: 2px 8px;
+  }
+  .card .tag.ai { background: #ecfdf5; color: #065f46; }
+  .card .tag.dev { background: #eff6ff; color: #1e40af; }
+  .card .body {
+    font-size: 14px;
+    color: #1c1917;
+    line-height: 1.6;
+  }
+  .card .footer {
+    margin-top: auto;
+    padding-top: 6px;
+    font-size: 12px;
+    color: #78716c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .card .footer a {
+    color: #57534e;
+    text-decoration: none;
+    border-bottom: 1px dashed #d6d3d1;
+  }
+  .card .footer a:hover { color: #1c1917; border-color: #78716c; }
+
+  .summary {
+    background: #fff;
+    border: 1px solid #e7e5e4;
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #292524;
+  }
+  .summary h3 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #57534e;
+  }
+
+  .state {
+    text-align: center;
+    color: #78716c;
+    padding: 60px 20px;
+    font-size: 14px;
+  }
+  .skeleton {
+    background: linear-gradient(90deg, #f5f5f4 25%, #ececeb 50%, #f5f5f4 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+    border-radius: 12px;
+    height: 120px;
+  }
+  @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+
+  .error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  footer.page-foot {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid #e7e5e4;
+    color: #78716c;
+    font-size: 12px;
+    text-align: center;
+  }
+  footer.page-foot a { color: #57534e; }
+
+  @media (max-width: 520px) {
+    .wrap { padding: 22px 16px 40px; }
+    h1 { font-size: 22px; }
+    .grid { grid-template-columns: 1fr; }
+    .search { margin-left: 0; max-width: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>每日 AI 新聞 <span style="font-size:20px;">🤖</span></h1>
+    <div class="subtitle">每天早上自動更新 · 來源：<a href="https://x.deepsrt.cc/index.txt" target="_blank" rel="noopener">x.deepsrt.cc</a></div>
+    <div class="meta">
+      <span class="pill" id="status-pill"><span class="dot"></span><span id="status">載入中…</span></span>
+      <span id="last-update"></span>
+      <button class="refresh-btn" id="refresh-btn" title="重新抓取">↻ 重新整理</button>
+    </div>
+  </header>
+
+  <div class="filter-row" id="filters" style="display:none;">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="ai">🤖 AI 與大模型</button>
+    <button class="filter-btn" data-filter="dev">🛠️ 開發工具與 Agent</button>
+    <input type="text" class="search" id="search" placeholder="搜尋關鍵字…" />
+  </div>
+
+  <div id="content">
+    <div class="grid">
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+  </div>
+
+  <footer class="page-foot">
+    Built with Claude · <a href="https://github.com/Joseph19820124/ai-news-daily" target="_blank" rel="noopener">View on GitHub</a>
+  </footer>
+</div>
+
+<script>
+  const LOCAL_DATA = "./data.txt";
+  const UPSTREAM_DATA = "https://x.deepsrt.cc/index.txt";
+
+  const AI_SECTIONS = [
+    { key: "ai",  match: /AI\s*與大模型/, label: "🤖 AI 與大模型", tagClass: "ai" },
+    { key: "dev", match: /開發工具與\s*Agent/, label: "🛠️ 開發工具與 Agent 生態", tagClass: "dev" },
+  ];
+
+  function parseFeed(text) {
+    const lines = text.split(/\r?\n/);
+    const updateLine = lines.find(l => l.includes("最後更新")) || "";
+    const updatedAt = (updateLine.match(/最後更新[：:]\s*(.+)/) || [, ""])[1].trim();
+
+    let summary = "";
+    const sumIdx = lines.findIndex(l => /###\s*📝?\s*總結/.test(l));
+    if (sumIdx >= 0) {
+      const buf = [];
+      for (let i = sumIdx + 1; i < lines.length; i++) {
+        const l = lines[i].replace(/^>\s?/, "").trim();
+        if (!l) { if (buf.length) break; else continue; }
+        if (l.startsWith("###")) break;
+        buf.push(l);
+      }
+      summary = buf.join(" ");
+    }
+
+    const items = [];
+    let currentSection = null;
+    for (const raw of lines) {
+      const line = raw.trimEnd();
+      const headerMatch = line.match(/^###\s+(.+?)\s*$/);
+      if (headerMatch) {
+        const title = headerMatch[1];
+        currentSection = AI_SECTIONS.find(s => s.match.test(title)) || null;
+        continue;
+      }
+      if (!currentSection) continue;
+      const bullet = line.match(/^\s*[-*]\s+(.+)$/);
+      if (!bullet) continue;
+      let body = bullet[1].trim();
+      let tweetId = null;
+      const idMatch = body.match(/[（(](\d{15,25})[)）]\s*$/);
+      if (idMatch) {
+        tweetId = idMatch[1];
+        body = body.replace(/[（(]\d{15,25}[)）]\s*$/, "").trim();
+      }
+      items.push({
+        section: currentSection.key,
+        sectionLabel: currentSection.label,
+        tagClass: currentSection.tagClass,
+        body,
+        tweetId,
+      });
+    }
+    return { updatedAt, summary, items };
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, c => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+    }[c]));
+  }
+
+  let state = { items: [], summary: "", updatedAt: "", filter: "all", query: "", source: "" };
+
+  function render() {
+    const root = document.getElementById("content");
+    const q = state.query.trim().toLowerCase();
+    const filtered = state.items.filter(it => {
+      if (state.filter !== "all" && it.section !== state.filter) return false;
+      if (q && !it.body.toLowerCase().includes(q)) return false;
+      return true;
+    });
+
+    if (!filtered.length) {
+      root.innerHTML = `<div class="state">沒有符合條件的新聞。</div>`;
+      return;
+    }
+
+    const groups = {};
+    for (const it of filtered) {
+      (groups[it.section] = groups[it.section] || []).push(it);
+    }
+    const order = ["ai", "dev"];
+    let html = "";
+    for (const key of order) {
+      if (!groups[key]) continue;
+      const meta = AI_SECTIONS.find(s => s.key === key);
+      html += `<div class="section-title">${escapeHtml(meta.label)} <span class="count">${groups[key].length}</span></div>`;
+      html += `<div class="grid">`;
+      for (const it of groups[key]) {
+        const link = it.tweetId
+          ? `<a href="https://x.com/i/status/${it.tweetId}" target="_blank" rel="noopener">在 X 上查看 →</a>`
+          : `<span></span>`;
+        html += `
+          <div class="card">
+            <span class="tag ${it.tagClass}">${escapeHtml(meta.label)}</span>
+            <div class="body">${escapeHtml(it.body)}</div>
+            <div class="footer">
+              ${it.tweetId ? `<span title="Tweet ID">#${escapeHtml(it.tweetId.slice(-6))}</span>` : `<span></span>`}
+              ${link}
+            </div>
+          </div>`;
+      }
+      html += `</div>`;
+    }
+
+    if (state.summary && state.filter === "all" && !q) {
+      html += `<div class="summary"><h3>📝 今日總結</h3>${escapeHtml(state.summary)}</div>`;
+    }
+    root.innerHTML = html;
+  }
+
+  async function fetchText(url) {
+    const r = await fetch(url + (url.includes("?") ? "&" : "?") + "_=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const t = await r.text();
+    if (!t || t.length < 100) throw new Error("空內容");
+    return t;
+  }
+
+  async function load() {
+    const statusEl = document.getElementById("status");
+    const pill = document.getElementById("status-pill");
+    const updateEl = document.getElementById("last-update");
+    statusEl.textContent = "載入中…";
+    pill.classList.remove("warning");
+
+    let text = "";
+    let source = "";
+    const errors = [];
+    try {
+      text = await fetchText(LOCAL_DATA);
+      source = "local";
+    } catch (e) {
+      errors.push("local: " + (e?.message || e));
+      try {
+        text = await fetchText(UPSTREAM_DATA);
+        source = "upstream";
+      } catch (e2) {
+        errors.push("upstream: " + (e2?.message || e2));
+      }
+    }
+
+    if (!text) {
+      document.getElementById("content").innerHTML =
+        `<div class="error"><b>抓取失敗</b><br>${escapeHtml(errors.join(" / "))}</div>`;
+      statusEl.textContent = "載入失敗";
+      pill.classList.add("warning");
+      return;
+    }
+
+    const parsed = parseFeed(text);
+    state.items = parsed.items;
+    state.summary = parsed.summary;
+    state.updatedAt = parsed.updatedAt;
+    state.source = source;
+
+    statusEl.textContent = `${parsed.items.length} 則 AI 新聞`;
+    updateEl.textContent = parsed.updatedAt
+      ? `最後更新：${parsed.updatedAt}` + (source === "upstream" ? "（即時）" : "")
+      : "";
+
+    document.getElementById("filters").style.display = "flex";
+    render();
+  }
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".filter-btn");
+    if (!btn) return;
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.filter = btn.dataset.filter;
+    render();
+  });
+  document.getElementById("search").addEventListener("input", (e) => {
+    state.query = e.target.value;
+    render();
+  });
+  document.getElementById("refresh-btn").addEventListener("click", load);
+
+  load();
+</script>
+</body>
+</html>
