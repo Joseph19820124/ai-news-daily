@@ -1,0 +1,28 @@
+## 📋 X 動態摘要（過去 24 小時）
+最後更新：台北時間 2026-05-15 04:17
+
+### 🤖 AI 與大模型
+- xAI 發布 Grok Build CLI 早期測試版，提供 SuperGrok Heavy 訂閱者使用，定位為專業軟體工程的 agentic 編碼工具，正式加入 AI 編碼 agent 戰場。（2054993285152989373）
+- Codex 登陸 ChatGPT 行動 App（iOS/Android 預覽），可直接在手機上啟動任務、審查輸出和批准下一步，agent 使用場景從桌面擴展到行動端。（2055016850849993072）
+- Microsoft 開始取消內部 Claude Code 授權，要求工程師在六月底前轉移至 GitHub Copilot CLI，AI 工具的企業內部政治戰開打。（2055000505923871219）
+- OpenAI 估值已超過 Anthropic 兩倍以上，即使兩家都快速成長，差距仍在擴大。（2054989942087147722）
+- Poetiq 的 Meta-System 從零建構自己的編碼工具鏈，在 LiveCodeBench Pro 取得 SOTA，僅用標準 API 和 Gemini 3.1 Pro，無需微調。（2054955847587885145）
+- Aleph 全自主 AI agent 系統在所有主要定理證明基準（PutnamBench、VeriSoftBench、Verina）上取得最佳成績，形式驗證自動化取得突破。（2054943125668311432）
+- SWE-ZERO-12M-trajectories 發布：開源最大 agentic trace 資料集，112B tokens、1200 萬條軌跡、12.2 萬個 PR，為 agent 訓練提供前所未有的資料規模。（2054600962137100493）
+- Anthropic 宣布恢復 Claude 第三方工具使用，推出「Agent SDK Credits」機制。（2054746039908004154）
+- GPT-5.5 結合 Codex 和 ForgeCAD，可將 ChatGPT 生成的產品圖片直接轉換為 CAD 檔案，AI 進入工業設計流程。（2054879019909181550）
+- Qwen3-TTS 在 vLLM-Omni 上以每百萬字元 3 美元提供服務，比同類閉源 TTS API 便宜 90%。（2054976770789769513）
+
+### 🛠️ 開發工具與 Agent 生態
+- Linear 推出 Code Intelligence，讓 Linear Agent 可存取程式碼庫，將 repo 轉化為全團隊共享的產品上下文。（2054995572084404456）
+- MagicPath 2.0 發布：多人協作畫布，支援人類和 agent（Codex、Claude Code）共同設計和建構。（2054975534539370708）
+- OpenClaw 2026.5.12 更新：OpenAI 設定預設使用 Codex 登入、runtime fallback、Telegram 輪詢穩定性提升。（2055013211473154309）
+- pgGraph 開源：基於 Postgres 的圖遍歷引擎（Rust 實現），解決 agent 團隊在關係型資料庫上做圖查詢的痛點。（2054537123123110277）
+- Workato 開源 Seven Factors 框架，用於企業系統中 AI agent 的安全治理。（2054694104299393477）
+- DecodingTrust-Agent Platform（DTap）發布：首個可控全端模擬平台，支援 50+ 真實環境的 AI agent 紅隊測試。（2055001248647242113）
+- VS Code 新功能「Agent Window」預覽版發布，簡化多 AI agent 開發體驗。（2054943865040416932）
+- Airbnb 兩位 Senior Staff Engineer 分享 agentic coding 實戰經驗，已在生產環境完成大規模 LLM-agent 遷移。（2054948286403150017）
+- Datadog 發布 Toto 2.0 時間序列基礎模型（Apache 2.0），從 4M 到 2.5B 參數，scaling law 在時間序列領域開始生效。（2054991352295731619）
+
+### 📝 總結
+> 本日 X 動態以川普訪中峰會和 AI agent 工具爆發為雙主軸。AI 領域迎來多個重磅發布：xAI 的 Grok Build CLI 正式加入編碼 agent 戰場、Codex 登陸行動端、Microsoft 內部開始清退 Claude Code，顯示 AI 工具的企業採購已進入零和博弈階段。安全面值得警惕：node-ipc 供應鏈攻擊和 Next.js 高危漏洞同日曝光，提醒開發者在追求 AI 效率的同時不可忽視基礎安全衛生。Cerebras IPO 標誌著 AI 晶片新創的資本化進入新階段。
