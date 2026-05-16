@@ -1,28 +1,33 @@
 ## 📋 X 動態摘要（過去 24 小時）
-最後更新：台北時間 2026-05-15 04:17
+最後更新：台北時間 2026-05-16 06:29
 
 ### 🤖 AI 與大模型
-- xAI 發布 Grok Build CLI 早期測試版，提供 SuperGrok Heavy 訂閱者使用，定位為專業軟體工程的 agentic 編碼工具，正式加入 AI 編碼 agent 戰場。（2054993285152989373）
-- Codex 登陸 ChatGPT 行動 App（iOS/Android 預覽），可直接在手機上啟動任務、審查輸出和批准下一步，agent 使用場景從桌面擴展到行動端。（2055016850849993072）
-- Microsoft 開始取消內部 Claude Code 授權，要求工程師在六月底前轉移至 GitHub Copilot CLI，AI 工具的企業內部政治戰開打。（2055000505923871219）
-- OpenAI 估值已超過 Anthropic 兩倍以上，即使兩家都快速成長，差距仍在擴大。（2054989942087147722）
-- Poetiq 的 Meta-System 從零建構自己的編碼工具鏈，在 LiveCodeBench Pro 取得 SOTA，僅用標準 API 和 Gemini 3.1 Pro，無需微調。（2054955847587885145）
-- Aleph 全自主 AI agent 系統在所有主要定理證明基準（PutnamBench、VeriSoftBench、Verina）上取得最佳成績，形式驗證自動化取得突破。（2054943125668311432）
-- SWE-ZERO-12M-trajectories 發布：開源最大 agentic trace 資料集，112B tokens、1200 萬條軌跡、12.2 萬個 PR，為 agent 訓練提供前所未有的資料規模。（2054600962137100493）
-- Anthropic 宣布恢復 Claude 第三方工具使用，推出「Agent SDK Credits」機制。（2054746039908004154）
-- GPT-5.5 結合 Codex 和 ForgeCAD，可將 ChatGPT 生成的產品圖片直接轉換為 CAD 檔案，AI 進入工業設計流程。（2054879019909181550）
-- Qwen3-TTS 在 vLLM-Omni 上以每百萬字元 3 美元提供服務，比同類閉源 TTS API 便宜 90%。（2054976770789769513）
+- OpenAI 宣布重大組織重組：Greg Brockman 接管產品戰略，ChatGPT 與 Codex 將合併為統一體驗。（2055335888591433852）
+- Codex 登上 ChatGPT 手機 app，跨平台 agent 使用體驗大幅提升。（2055034461591588916）
+- OpenAI 內部自嘲：「我們忙著把 ChatGPT 帶進 Codex，這樣才能把 Codex 帶進 ChatGPT」。（2055404493689569611）
+- AI coding 市場數據顯示 Codex 使用量加速超越 Claude Code，多位開發者討論是否該遷移。（2055240780575301984）
+- 有用戶將銀行帳戶連接 ChatGPT 後的迷因瘋傳，反映大眾對 AI 存取金融數據的不信任。（2055330622176899559）
+- Tristan Thompson 早期投資 Anthropic 的故事被比作 Shaq 1999 年投資 Google Series A。（2055349748014751784）
+- Claude Mythos 突破 Apple 20 億美元防禦系統，發現全新攻擊向量，僅花 5 天約 $35K API 費用。（2055324519301107986）
+- 安全研究人員聲稱使用 Claude Mythos 成功入侵 macOS。（2055367546161729726）
+- OpenClaw Chain 四個關鍵漏洞暴露 245,000 台公開 AI Agent 伺服器。（2055315695785935337）
+- AWS 上使用生成式 AI 的用戶因 Cost Anomaly Detection 設定問題被收取約 476 萬日圓，引發警示。（2055055594357395950）
+- xAI API 推出語音克隆功能，2 分鐘內建立自訂語音，支援 28 種語言 80+ 聲音。（2050355373052223585）
+- Grok 訂閱現可在 Nous Research Hermes Agent 中使用，開放模型生態持續擴展。（2055375676656783733）
+- Nous Research Hermes Agent 可在 DGX Spark 上透過 Ollama 完全本地運行。（2055317325444710872）
+- Databricks AI Research 招募新團隊，專注解決 agent 持續改進與衡量的開放問題。（2055372210144210981）
+- Motus Tracing 開源發布：AI agent 可觀測性工具，無需帳號即可使用。（2055327218415341978）
+- Seedance 2.0 + GPT Image 2 可製作真正可互動的遊戲，不再只是靜態 AI 影片。（2055360539275194470）
+- Runway Agent 可從產品照片一步生成完整廣告。（2055364605979869229）
+- clawpatch 0.1.0 發布：將代碼庫映射為語義特徵切片，自動審查 bug 與品質問題。（2055364630709448970）
 
 ### 🛠️ 開發工具與 Agent 生態
-- Linear 推出 Code Intelligence，讓 Linear Agent 可存取程式碼庫，將 repo 轉化為全團隊共享的產品上下文。（2054995572084404456）
-- MagicPath 2.0 發布：多人協作畫布，支援人類和 agent（Codex、Claude Code）共同設計和建構。（2054975534539370708）
-- OpenClaw 2026.5.12 更新：OpenAI 設定預設使用 Codex 登入、runtime fallback、Telegram 輪詢穩定性提升。（2055013211473154309）
-- pgGraph 開源：基於 Postgres 的圖遍歷引擎（Rust 實現），解決 agent 團隊在關係型資料庫上做圖查詢的痛點。（2054537123123110277）
-- Workato 開源 Seven Factors 框架，用於企業系統中 AI agent 的安全治理。（2054694104299393477）
-- DecodingTrust-Agent Platform（DTap）發布：首個可控全端模擬平台，支援 50+ 真實環境的 AI agent 紅隊測試。（2055001248647242113）
-- VS Code 新功能「Agent Window」預覽版發布，簡化多 AI agent 開發體驗。（2054943865040416932）
-- Airbnb 兩位 Senior Staff Engineer 分享 agentic coding 實戰經驗，已在生產環境完成大規模 LLM-agent 遷移。（2054948286403150017）
-- Datadog 發布 Toto 2.0 時間序列基礎模型（Apache 2.0），從 4M 到 2.5B 參數，scaling law 在時間序列領域開始生效。（2054991352295731619）
+- node-ipc 再次被植入惡意程式（9.1.6、9.2.3、12.0.1），Socket AI 三分鐘內偵測，供應鏈安全警報。（2055006045077230048）
+- X 平台公布新排名演算法：垃圾發文（4+/天）被懲罰、回覆農場權重降低、長文與引用獲提升。（2055334050676814056）
+- LinkedIn 個人簡介中放入 prompt injection，導致招募者用古英語稱呼其為「Lord」。（2055275374905307216）
+- General Catalyst 領投 $31.5M 種子輪被指控抄襲既有公司 Kled。（2055384102409253056）
+- 「Don't Sign In With Google」警告文引發資安討論。（2055318795019858039）
+- Chainlink SVR 在 Aave V4 上線。（2055334906096484619）
 
 ### 📝 總結
-> 本日 X 動態以川普訪中峰會和 AI agent 工具爆發為雙主軸。AI 領域迎來多個重磅發布：xAI 的 Grok Build CLI 正式加入編碼 agent 戰場、Codex 登陸行動端、Microsoft 內部開始清退 Claude Code，顯示 AI 工具的企業採購已進入零和博弈階段。安全面值得警惕：node-ipc 供應鏈攻擊和 Next.js 高危漏洞同日曝光，提醒開發者在追求 AI 效率的同時不可忽視基礎安全衛生。Cerebras IPO 標誌著 AI 晶片新創的資本化進入新階段。
+> 本輪推特焦點延續川普訪中餘波：澤連斯基透露川普回程致電、中國否認白宮通稿中關於荷莫茲海峽的說法、習近平確認秋季回訪美國，顯示中美關係進入高頻互動但分歧未消的新階段。金融市場出現罕見全資產拋售，SpaceX 即將以 $SPCX 上市成為焦點。AI 領域最大新聞是 OpenAI 組織重組——ChatGPT 與 Codex 合併、Greg Brockman 接管產品，以及 Claude Mythos 突破 Apple 防禦系統的安全事件。開發者社群持續討論 Codex vs Claude Code 的遷移趨勢，而 node-ipc 供應鏈攻擊再次敲響開源安全警鐘。
