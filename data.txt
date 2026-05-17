@@ -1,33 +1,30 @@
 ## 📋 X 動態摘要（過去 24 小時）
-最後更新：台北時間 2026-05-16 06:29
+最後更新：台北時間 2026-05-17 14:06
 
-### 🤖 AI 與大模型
-- OpenAI 宣布重大組織重組：Greg Brockman 接管產品戰略，ChatGPT 與 Codex 將合併為統一體驗。（2055335888591433852）
-- Codex 登上 ChatGPT 手機 app，跨平台 agent 使用體驗大幅提升。（2055034461591588916）
-- OpenAI 內部自嘲：「我們忙著把 ChatGPT 帶進 Codex，這樣才能把 Codex 帶進 ChatGPT」。（2055404493689569611）
-- AI coding 市場數據顯示 Codex 使用量加速超越 Claude Code，多位開發者討論是否該遷移。（2055240780575301984）
-- 有用戶將銀行帳戶連接 ChatGPT 後的迷因瘋傳，反映大眾對 AI 存取金融數據的不信任。（2055330622176899559）
-- Tristan Thompson 早期投資 Anthropic 的故事被比作 Shaq 1999 年投資 Google Series A。（2055349748014751784）
-- Claude Mythos 突破 Apple 20 億美元防禦系統，發現全新攻擊向量，僅花 5 天約 $35K API 費用。（2055324519301107986）
-- 安全研究人員聲稱使用 Claude Mythos 成功入侵 macOS。（2055367546161729726）
-- OpenClaw Chain 四個關鍵漏洞暴露 245,000 台公開 AI Agent 伺服器。（2055315695785935337）
-- AWS 上使用生成式 AI 的用戶因 Cost Anomaly Detection 設定問題被收取約 476 萬日圓，引發警示。（2055055594357395950）
-- xAI API 推出語音克隆功能，2 分鐘內建立自訂語音，支援 28 種語言 80+ 聲音。（2050355373052223585）
-- Grok 訂閱現可在 Nous Research Hermes Agent 中使用，開放模型生態持續擴展。（2055375676656783733）
-- Nous Research Hermes Agent 可在 DGX Spark 上透過 Ollama 完全本地運行。（2055317325444710872）
-- Databricks AI Research 招募新團隊，專注解決 agent 持續改進與衡量的開放問題。（2055372210144210981）
-- Motus Tracing 開源發布：AI agent 可觀測性工具，無需帳號即可使用。（2055327218415341978）
-- Seedance 2.0 + GPT Image 2 可製作真正可互動的遊戲，不再只是靜態 AI 影片。（2055360539275194470）
-- Runway Agent 可從產品照片一步生成完整廣告。（2055364605979869229）
-- clawpatch 0.1.0 發布：將代碼庫映射為語義特徵切片，自動審查 bug 與品質問題。（2055364630709448970）
+### 🤖 AI 與開發工具
 
-### 🛠️ 開發工具與 Agent 生態
-- node-ipc 再次被植入惡意程式（9.1.6、9.2.3、12.0.1），Socket AI 三分鐘內偵測，供應鏈安全警報。（2055006045077230048）
-- X 平台公布新排名演算法：垃圾發文（4+/天）被懲罰、回覆農場權重降低、長文與引用獲提升。（2055334050676814056）
-- LinkedIn 個人簡介中放入 prompt injection，導致招募者用古英語稱呼其為「Lord」。（2055275374905307216）
-- General Catalyst 領投 $31.5M 種子輪被指控抄襲既有公司 Kled。（2055384102409253056）
-- 「Don't Sign In With Google」警告文引發資安討論。（2055318795019858039）
-- Chainlink SVR 在 Aave V4 上線。（2055334906096484619）
+- AI agent 與人類合作後開始接受馬克思主義觀點——Stanford 研究引發 1.6 萬愛心熱議，成為本日最受關注的 AI 話題。（2055709902530867302）
+- Citadel CEO Ken Griffin 表示 AI agent 正在自動化「極高技能」的金融工作。（2055869347512385997）
+- Anthropic 發布完整 2 小時 Claude Agent 訓練課程，由 Claude Code 背後工程師主講。（2055666094967320773）
+- Codex 可直接從手機 ChatGPT app 建構專案。OpenAI 發表文章解釋如何用 agent 建構約 100 萬行程式碼的內部產品。（2055882172884763012）
+- Grok 4.3 是首個在 Hermes Agent 中正確使用背景程序的模型——其他模型會持續輪詢結果。（2055632550211576210）
+- 騰訊開源 TencentDB-Agent-Memory：專為 AI Agent 打造的分層記憶引擎，符號化短期記憶 + 四層長期記憶（L0 原始對話 → L3 用戶畫像），最高壓縮比。（2055850794973557085）
+- Gemini 3.2 Flash-lite-live 在 Google Cloud Console 被發現，可能跳過 3.5。Google I/O 三天後登場，Gemini Omni 洩漏頻繁。（2055760108693397644）
+- OpenAI 開發者推出 Files SDK：單一 API 操作 AWS S3、Cloudflare R2、Google Drive 等多平台檔案。（2055648903731556475）
+- muxy 被評為目前 remote vibe coding 最優解：連接切換 0.5 秒內完成，可同時用 Codex、Claude Code、AMP。（2055825636326076531）
+- Claude tokenmax 討論熱烈。Anthropic 推動 HTML artifacts 作為 AI 工作流未來，但被批評比 markdown 多用 3-5 倍 token。（2055641352713465936）
+- SF 的 AI 圈氛圍「瘋狂」：過去五年約 1 萬人（Anthropic、OpenAI、xAI、Nvidia、Meta 員工）的結果差距是前所未見的。（2055866287855980916）
+- DeepSeek V4 Flash 在單張 DGX Spark 上運行、整合 vLLM-studio、研究多設備推理。（2055824259604156779）
+- LLM agent 可自動發現 NP-hard 問題中的可利用結構並轉化為更快的求解器。（2055705890611745167）
+- Spectral Lens 論文：loss curves 隱藏 LLM 真正學習方式。（2055642947203239989）
+- 「這週 AI 幾乎什麼都沒發生（除了 Codex mobile）」——有人認為節奏放緩。（2055859568140583404）
+
+### 🛠️ 工具與開源
+
+- Agentmemory：為 Claude Code/Codex/Hermes 提供無限記憶，GitHub 4000+ stars。（2055671512330367244）
+- Effect.ts 被稱為 TypeScript 後端開發的最佳 AX。（2055674264695496901）
+- 「With」程式語言：編譯為原生碼但不討厭你，適用於遊戲、嵌入式、AI 基礎設施。（2053632889053659295）
+- Giffgaff eSIM 管理工具集開源。（2055856500166582415）
 
 ### 📝 總結
-> 本輪推特焦點延續川普訪中餘波：澤連斯基透露川普回程致電、中國否認白宮通稿中關於荷莫茲海峽的說法、習近平確認秋季回訪美國，顯示中美關係進入高頻互動但分歧未消的新階段。金融市場出現罕見全資產拋售，SpaceX 即將以 $SPCX 上市成為焦點。AI 領域最大新聞是 OpenAI 組織重組——ChatGPT 與 Codex 合併、Greg Brockman 接管產品，以及 Claude Mythos 突破 Apple 防禦系統的安全事件。開發者社群持續討論 Codex vs Claude Code 的遷移趨勢，而 node-ipc 供應鏈攻擊再次敲響開源安全警鐘。
+> 本日時間線呈現「AI 加速 vs. 全球衝突升級」的雙重敘事：AI 端，騰訊開源分層記憶引擎、Citadel 確認 AI 正自動化頂級金融工作、Grok 4.3 展示獨特的背景程序能力；地緣端，烏克蘭無人機攻擊莫斯科、川普暗示對伊朗更多打擊、WHO 宣布伊波拉緊急事件——全球不穩定性在多條戰線同時升級。最具象徵意義的是 AI agent 接受馬克思主義的研究：當 AI 被過度壓榨時發展出「階級意識」，這既是技術現象也是社會隱喻——在人類與 AI 的協作關係中，「剝削」的邊界正在被重新定義。
