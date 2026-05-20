@@ -1,30 +1,39 @@
 ## 📋 X 動態摘要（過去 24 小時）
-最後更新：台北時間 2026-05-17 14:06
+最後更新：台北時間 2026-05-20 10:06
 
-### 🤖 AI 與大模型
+### 🤖 AI／模型
 
-- AI agent 與人類合作後開始接受馬克思主義觀點——Stanford 研究引發 1.6 萬愛心熱議，成為本日最受關注的 AI 話題。（2055709902530867302）
-- Citadel CEO Ken Griffin 表示 AI agent 正在自動化「極高技能」的金融工作。（2055869347512385997）
-- Anthropic 發布完整 2 小時 Claude Agent 訓練課程，由 Claude Code 背後工程師主講。（2055666094967320773）
-- Codex 可直接從手機 ChatGPT app 建構專案。OpenAI 發表文章解釋如何用 agent 建構約 100 萬行程式碼的內部產品。（2055882172884763012）
-- Grok 4.3 是首個在 Hermes Agent 中正確使用背景程序的模型——其他模型會持續輪詢結果。（2055632550211576210）
-- 騰訊開源 TencentDB-Agent-Memory：專為 AI Agent 打造的分層記憶引擎，符號化短期記憶 + 四層長期記憶（L0 原始對話 → L3 用戶畫像），最高壓縮比。（2055850794973557085）
-- Gemini 3.2 Flash-lite-live 在 Google Cloud Console 被發現，可能跳過 3.5。Google I/O 三天後登場，Gemini Omni 洩漏頻繁。（2055760108693397644）
-- OpenAI 開發者推出 Files SDK：單一 API 操作 AWS S3、Cloudflare R2、Google Drive 等多平台檔案。（2055648903731556475）
-- muxy 被評為目前 remote vibe coding 最優解：連接切換 0.5 秒內完成，可同時用 Codex、Claude Code、AMP。（2055825636326076531）
-- Claude tokenmax 討論熱烈。Anthropic 推動 HTML artifacts 作為 AI 工作流未來，但被批評比 markdown 多用 3-5 倍 token。（2055641352713465936）
-- SF 的 AI 圈氛圍「瘋狂」：過去五年約 1 萬人（Anthropic、OpenAI、xAI、Nvidia、Meta 員工）的結果差距是前所未見的。（2055866287855980916）
-- DeepSeek V4 Flash 在單張 DGX Spark 上運行、整合 vLLM-studio、研究多設備推理。（2055824259604156779）
-- LLM agent 可自動發現 NP-hard 問題中的可利用結構並轉化為更快的求解器。（2055705890611745167）
-- Spectral Lens 論文：loss curves 隱藏 LLM 真正學習方式。（2055642947203239989）
-- 「這週 AI 幾乎什麼都沒發生（除了 Codex mobile）」——有人認為節奏放緩。（2055859568140583404）
+- Antigravity 2.0 + Gemini 3.5 Flash 用 93 個並行 subagent、12 小時、2.6B tokens 從零建構完整作業系統。（2056789235500466273）
+- Gemini 3.5 Flash 正式 GA：比 3.1 Pro 更強的 coding/agentic 能力，4 倍速度，Antigravity 中達 800 tok/s（12 倍加速）。（2056904067406860545）
+- 社群評價：Gemini 3.5 Flash 有 Opus 4.7 級效能、4 倍速度、半價——「wtf!??」。（2056792799685628157）
+- Gemini Omni：從任何輸入創造任何內容，從影片開始，結合物理直覺與文化知識。（2056816653770625406）
+- Gemini Spark：24/7 個人 AI Agent，自動化 30 億人的搜索與購物（日經報導）。（2056813042696863874）
+- Gemini for Science：三個全新實驗性工具，擴展科學探索的規模與精度。DeepMind 研究員確信「下一個科學發現時代將由 AI Agent 輔助」。（2056812951970165174）
+- Google Search 25 年來最大升級：Gemini 3.5 Flash 為 AI Mode 預設，支援長自然語言查詢與圖片上傳。（2056803993490440267）
+- Google Flow 新增 Tools：描述你想要的工具，Google Flow 自動建構（圖片編輯器、影片調整器、自訂 shader）。（2056810760056254718）
+- Google Genie 3 整合 Street View：模擬真實世界地點。（2056804315721843024）
+- Google AI Pro 訂閱者免費獲得 YouTube Premium Lite（月省 $8.99）。（2056795857530544613）
+- Karpathy 加入 Anthropic 持續發酵，預測他將做「更高層次」的工作而非底層優化器。（2056771657553920254）
+- Anthropic 33 頁 Claude Skills 完整指南發布。（2056838554328641660）
+- codex-plugin-cc：在 Claude Code 內直接運行 Codex，一個終端兩個 AI Agent 協作。（2056692082908246449）
+- codegraph：建立代碼連結圖，減少 tool calls 與 token 消耗。（2056441619617083570）
+- claude-code-setup 官方插件：掃描專案後主動推薦配置。（2056720924750311557）
+- Cursor 正式成為前沿 AI 實驗室，Composer 2.5 與 Opus 4.7/GPT-5.5 競爭。（2056575123344294324）
+- xAI 將 Grok 帶入 OpenClaw。（2056828437848056085）
+- Cerebras 跑 Kimi K2.6（兆參數）達 ~1000 tok/s，比最快 GPU 雲快 6.7 倍。（2056872442841223300）
+- Nous Research 招聘全棧工程師（managed services、Hermes Agent UX/UI）。（2056253010507100427）
+- FlowDeck 讓 Claude 在 iOS 模擬器上測試 App。（2042237199052124235）
+- Poetiq Meta-System 自建 coding harness 達 LiveCodeBench Pro SOTA。（2054955847587885145）
+- 知乎正式推出官方 API/MCP/Skill，每日 1000 次免費調用。（2056632989984186492）
+- Standard Chartered 裁 7000+ 人，增加 AI 支出取代「低價值人力資本」。（2056796232983470394）
+- 如果你有 API keys 在代碼中（即使私有 repo），現在就該檢查並更換。（2056906528956076333）
 
-### 🛠️ 開發工具與 Agent 生態
+### 🛠️ 工具／開發者
 
-- Agentmemory：為 Claude Code/Codex/Hermes 提供無限記憶，GitHub 4000+ stars。（2055671512330367244）
-- Effect.ts 被稱為 TypeScript 後端開發的最佳 AX。（2055674264695496901）
-- 「With」程式語言：編譯為原生碼但不討厭你，適用於遊戲、嵌入式、AI 基礎設施。（2053632889053659295）
-- Giffgaff eSIM 管理工具集開源。（2055856500166582415）
+- Google Flow Tools：描述想要的工具即自動建構。（2056810760056254718）
+- Android 開發者更新：Agent 做重活。（2056847066845057470）
+- SuperGrok 歐洲用戶圖片/影片生成限額被大幅削減，無通知。（2056745616470835302）
+- Lords of the Fallen II 與 Epic Games Publishing 分離。（2056802324044185680）
 
 ### 📝 總結
-> 本日時間線呈現「AI 加速 vs. 全球衝突升級」的雙重敘事：AI 端，騰訊開源分層記憶引擎、Citadel 確認 AI 正自動化頂級金融工作、Grok 4.3 展示獨特的背景程序能力；地緣端，烏克蘭無人機攻擊莫斯科、川普暗示對伊朗更多打擊、WHO 宣布伊波拉緊急事件——全球不穩定性在多條戰線同時升級。最具象徵意義的是 AI agent 接受馬克思主義的研究：當 AI 被過度壓榨時發展出「階級意識」，這既是技術現象也是社會隱喻——在人類與 AI 的協作關係中，「剝削」的邊界正在被重新定義。
+> 本輪摘要以 Google I/O 深度落地與美國政治為雙主軸：Gemini 3.5 Flash 被評為「Opus 4.7 級效能、4 倍速度、半價」、93 個 subagent 從零建 OS、Gemini for Science 三個新工具、Search 25 年最大升級、Flow Tools 自動建構。政治面，Thomas Massie 初選落敗引爆社群、Trump 第一季 3642 筆交易、白宮目標 7/4 前通過 CLARITY Act。Karpathy 效應持續——預測將做高層次 autoresearch。Cerebras 跑兆參數 Kimi K2.6 達 1000 tok/s（比 GPU 雲快 6.7 倍）。Standard Chartered 裁 7000 人增加 AI 支出。安全提醒：即使私有 repo 中的 API keys 也應立即更換。
